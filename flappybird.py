@@ -2,7 +2,6 @@ import pygame
 import os
 import random
 from time import sleep
-import neat
 
 ai_jogando = True
 geração = 0
@@ -194,8 +193,8 @@ def main(genomas, config):
         lista_genomas = []
         passaros = []
         for _, genoma in genomas:
-            rede = neat.nn.FeedForwardNetwork.create(genoma, config)
-            redes.append(rede)
+            # rede = neat.nn.FeedForwardNetwork.create(genoma, config)
+            # redes.append(rede)
             genoma.fitness = 0
             lista_genomas.append(genoma)
             passaros.append(Passaro(230, 350))
